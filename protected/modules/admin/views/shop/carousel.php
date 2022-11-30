@@ -39,6 +39,6 @@ $this->widget('\common\ext\sort\widgets\Sortable', [
     <?php endforeach; ?>
   </ul>
   <?php else: ?>
-    <p>Нет товаров</p>
+    <p>Нет Статьий</p>
   <?php endif; ?>
 </div>

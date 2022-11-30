@@ -26,7 +26,7 @@ $(document).ready(function() {
 });
 </script>
 <? if($isIndexPage): ?>
-<h2>Товары на главной странице каталога</h2>
+<h2>Статьи на главной странице каталога</h2>
 <?endif?>
 <div id="product-list-module">
   <?php if ($productDataProvider && ($productDataProvider->getItemCount() > 0)): ?>
@@ -44,7 +44,6 @@ $(document).ready(function() {
         </div>
         <div class="caption">
           <p class="title" title="<?php echo $product->title ?>"><?php echo Chtml::link($product->title, array('shop/productUpdate', 'id'=>$product->id)); ?></p>
-          <?= CHtml::link('<div class="btn btn-default btn-sm"><span class="price">'.$product->price.'</span> руб.</div>', ['shop/productUpdate', 'id'=>$product->id]); ?>
           <?= CHtml::link('Удалить', ['shop/productDelete', 'id'=>$product->id], [
           	'class'=>'btn btn-danger btn-sm pull-right',
           	'onclick'=>"return confirm('Вы действительно хотите удалить товар?')"

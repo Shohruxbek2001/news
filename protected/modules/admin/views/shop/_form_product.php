@@ -25,45 +25,12 @@ $this->widget('\common\widgets\form\DropDownListField', A::m(compact('form', 'mo
    <div class="inline"><?=\CHtml::link('посмотреть на сайте', ['/shop/product', 'id'=>$model->id], ['target'=>'_blank'])?></div>
 </div>
 
-<?php $this->widget('\common\widgets\form\TextField', A::m(compact('form', 'model'), ['attribute'=>'code'])); ?>
 
-<?php 
-if(D::cmsIs('shop_enable_brand')) {
-    $this->widget('\common\widgets\form\DropDownListField', A::m(compact('form', 'model'), [
-        'attribute'=>'brand_id',
-        'data'=>Brand::getListData(true),
-        'htmlOptions'=>['class'=>'form-control w50', 'empty'=>'Не указан']
-    ]));
-}
-?>
-
-<div class="row">
-	<?php
-	   $this->widget('\common\widgets\form\NumberField', A::m(compact('form', 'model'), [
-	       'tagOptions'=>['class'=>'col-md-4', 'style'=>'padding-left:0'],
-	       'attribute'=>'price',
-	       'unit'=>' руб.',
-	       'htmlOptions'=>['class'=>'form-control w50 inline', 'step'=>'0.01']
-	   ]));
-	?>
-    <?php
-    if(D::cms('shop_enable_old_price')) {
-        $this->widget('\common\widgets\form\NumberField', A::m(compact('form', 'model'), [
-            'tagOptions'=>['class'=>'col-md-4'],
-            'attribute'=>'old_price',
-            'unit'=>' руб.',
-            'htmlOptions'=>['class'=>'form-control w50 inline', 'step'=>'0.01']
-        ]));
-    }
-    ?>
-</div>
 
 <div class="panel panel-default">
     <div class="panel-body" style="padding:10px 15px 0">
         <div class="row">
-            <?php $this->widget('\common\widgets\form\CheckboxField', A::m(compact('form', 'model'), ['attribute'=>'notexist', 'tagOptions'=>['class'=>'col-md-3']])); ?>
             <?php $this->widget('\common\widgets\form\CheckboxField', A::m(compact('form', 'model'), ['attribute'=>'new', 'tagOptions'=>['class'=>'col-md-3']])); ?>
-            <?php $this->widget('\common\widgets\form\CheckboxField', A::m(compact('form', 'model'), ['attribute'=>'sale', 'tagOptions'=>['class'=>'col-md-3']])); ?>
             <?php $this->widget('\common\widgets\form\CheckboxField', A::m(compact('form', 'model'), ['attribute'=>'hit', 'tagOptions'=>['class'=>'col-md-3']])); ?>
         </div>
         <div class="row">

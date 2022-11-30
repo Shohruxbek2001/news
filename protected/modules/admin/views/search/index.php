@@ -1,4 +1,4 @@
-<h1>Результаты поиска товаров<span style="font-size:0.7em;display:inline-block;margin-left:5px;">(<?=CHtml::link('вернуться в каталог', '/cp/shop/index')?>)</span></h1>
+<h1>Результаты поиска Статьи<span style="font-size:0.7em;display:inline-block;margin-left:5px;">(<?=CHtml::link('вернуться в каталог', '/cp/shop/index')?>)</span></h1>
 <div class="clearfix panel">
 <? $this->renderPartial('/shop/_search'); ?>
 </div>

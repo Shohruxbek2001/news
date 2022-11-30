@@ -14,7 +14,7 @@ $categoriesListData=\Category::model()->getCategories();
 ]); ?>
 <div class="panel panel-default" id="category_controls">
     <div class="panel-heading">
-        Панель управления товарами <a data-toggle="collapse" href="#category_controls_collapse">открыть</a>
+        Панель управления статьиями <a data-toggle="collapse" href="#category_controls_collapse">открыть</a>
         <small class="pull-right text-muted">
             <?= \CHtml::checkBox('disable_tooltips', A::get($_COOKIE, 'disable_tooltips', 0), ['style'=>'width:10px;height:10px']); ?>
             &nbsp;<label for="disable_tooltips" style="font-weight:normal;maring:0 0 0 0">не отображать подсказки</label>
@@ -31,7 +31,7 @@ $categoriesListData=\Category::model()->getCategories();
                     <div class="checkbox inline">
                         <label for="forcy_all">
                             <input data-js="forcy-all" id="forcy_all" name="forcy_all" type="checkbox" value="1" />
-                            Применить ко всем товарам
+                            Применить ко всем статьиям
                         </label>
                     </div>
                 </div>
@@ -102,31 +102,31 @@ $categoriesListData=\Category::model()->getCategories();
             $controls.find("[data-js='btn-move']").tooltip({
                 "trigger": "hover",
                 "placement": "left",
-                "title": 'Переместить отмеченные товары в выбранную категорию',
+                "title": 'Переместить отмеченные статьи в выбранную категорию',
                 "container": "body"
             });
             $controls.find("[data-js='btn-copy']").tooltip({
                 "trigger": "hover",
                 "placement": "bottom",
-                "title": 'Скопировать отмеченные товары в выбранную категорию',
+                "title": 'Скопировать отмеченные статьи в выбранную категорию',
                 "container": "body"
             });
             $controls.find("[data-js='btn-rel']").tooltip({
                 "trigger": "hover",
                 "placement": "bottom",
-                "title": 'Привязать выбранную категорию, как дополнительную, к отмеченным товарам',
+                "title": 'Привязать выбранную категорию, как дополнительную, к отмеченным статьиям',
                 "container": "body"
             });
             $controls.find("[data-js='btn-unrel']").tooltip({
                 "trigger": "hover",
                 "placement": "right",
-                "title": 'Удалить из дополнительных категорий, для отмеченных товаров, выбранную категорию',
+                "title": 'Удалить из дополнительных категорий, для отмеченных статьия, выбранную категорию',
                 "container": "body"
             });
             $controls.find("[data-js='btn-remove']").tooltip({
                 "trigger": "hover",
                 "placement": "bottom",
-                "title": 'Удалить отмеченные товары',
+                "title": 'Удалить отмеченные статьи',
                 "container": "body"
             });
         }

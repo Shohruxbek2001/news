@@ -1,24 +1,19 @@
-<div class="news">
-    <div class="news__container container">
-        <div class="news__inner">
-            <div class="news__header">
-                <h2 class="news__title"><?= D::cms('events_title')?></h2>
-                <?php if (!D::cms('vertical_template')): ?>
-                    <div class="news-all">
-                        <a class="news-all__link" href="<?= \Yii::app()->createUrl('site/events') ?>"><?= D::cms('events_link_all_text')?></a>
-                    </div>
-                <?php endif; ?>
-            </div>
+<?php foreach($events as $event):?>
 
-            <div class="news__list">
-                <?php foreach($events as $event): ?>
-                    <?$this->controller->renderPartial('//site/_events_item', ['data'=>$event])?>
-                <?php endforeach; ?>
-            </div>
-
-            <div class="news-all news-all--mobile">
-                <a class="news-all__link" href="<?= \Yii::app()->createUrl('site/events') ?>"><?= D::cms('events_link_all_text')?></a>
-            </div>
+<div class="article">
+    <div class="article-left">
+        <a href="<?= Yii::app()->createUrl('site/event', array('id' => $event->id)); ?>"><img src="<?= ResizeHelper::resize($event->getPreviewImg() ?: $this->controller->template . '/images/news-empty.jpg', 350 * 1.2, 222 * 1.2) ?>"></a>
+    </div>
+    <div class="article-right">
+        <div class="article-title">
+            <p><?=$event->date?><br/>
+            <a class="title" href="<?= Yii::app()->createUrl('site/event', array('id' => $event->id)); ?>"><?=$event->title?></a>
+        </div>
+        <div class="article-text">
+            <p><?=$event->intro?></p>
+            <div class="clearfix"></div>
         </div>
     </div>
+    <div class="clearfix"></div>
 </div>
+<?php endforeach;?>

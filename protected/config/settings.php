@@ -5,7 +5,7 @@
 return [
 	'shop'=>[
 		'class'=>'\ShopSettings',
-		'title'=>'Настройки магазина',
+		'title'=>'Настройки Cтатьи',
 		'menuItemLabel'=>'Настройки',
 		'breadcrumbs'=>['Каталог'=>'/cp/shop/index'],
 		'viewForm'=>'admin.views.settings._shop_form'

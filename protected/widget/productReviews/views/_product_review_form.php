@@ -20,7 +20,7 @@
     .star-4 {width:72px;}
     .star-5 {width:90px;}
 </style>
-<div style="display: none;">
+<div class="coment-form">
 <div id="review-form-div" class="form">
     <h2>Написать отзыв</h2>
     <?php /** @var CActiveForm $form */ ?>

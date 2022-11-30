@@ -91,7 +91,7 @@ abstract class BaseMenuWidget extends \CWidget
 //        $arrow = '<span class="menu-arrow">'. file_get_contents($_SERVER["DOCUMENT_ROOT"].'/images/menu-arrow.svg') .'</span>';
         $arrow = '';
 
-		$html = '<ul class="clearfix"';
+		$html = '<ul class="nav navbar-nav"';
 		if($level>0){
 			$html .= 'class="sub-menu__'.$level.'"';
 		}
@@ -109,7 +109,7 @@ abstract class BaseMenuWidget extends \CWidget
 			$url = UrlHelper::createUrl($item['model'], $this->adminMode);
 
 
-			$html .= '<li';
+			$html .= '<li class="dropdown "';
 
 			$class = '';
 
@@ -130,7 +130,7 @@ abstract class BaseMenuWidget extends \CWidget
 			
 			$html .= '>';
             $class = $item['model']['options']['model'] === 'question' ? 'nobr' : '';
-            $html .= \CHtml::link('<span>'.$item['model']->title . (!empty($item['childs']) ? $arrow : '') . '</span>', $url, array('class' => $class,'title'=>$item['model']->seo_a_title));
+            $html .= \CHtml::link('<span>'.$item['model']->title . (!empty($item['childs']) ? $arrow : '') .(empty($shopIndexUrl==$url) ? '</span>' : ' <b class="caret"></b>'), empty($shopIndexUrl==$url) ? $url : '#', array('class' =>empty($shopIndexUrl==$url) ? $class: 'dropdown-toggle','data-toggle'=>empty($shopIndexUrl==$url) ? '' : 'dropdown','title'=>$item['model']->seo_a_title));
 
 			if(!empty($item['childs'])) {
 				$html .= $this->renderItems($item['childs'], ($level + 1), true);
@@ -158,7 +158,7 @@ abstract class BaseMenuWidget extends \CWidget
         $maxLevel=(int)\D::cms('shop_menu_level', 1);
         if($level > $maxLevel) return '';
         
-        $html='<ul>';
+        $html='<ul class="dropdown-menu">';
         foreach ($categories as $category) {
             $html.=\CHtml::openTag('li'); 
             $html.=\CHtml::link($category->title, ['/shop/category', 'id'=>$category->id]);

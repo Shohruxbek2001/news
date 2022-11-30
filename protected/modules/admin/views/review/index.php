@@ -5,7 +5,7 @@
      * Date: 28.01.13
      * Time: 12:26
      */
-     $this->breadcrumbs = array('Отзывы на товар'=>array('review/index'));
+     $this->breadcrumbs = array('Отзывы на статью'=>array('review/index'));
 ?>
 
 

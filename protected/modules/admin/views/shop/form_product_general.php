@@ -3,7 +3,7 @@ use common\components\helpers\HHtml;
 
 $breadcrumbs = array();
 
-$breadcrumbs[D::cms('shop_title', 'Каталог')] = array('shop/index');
+$breadcrumbs[D::cms('shop_title', 'Статьи')] = array('shop/index');
 if($model->category instanceof Category) {
 	if($ancestors = $model->category->ancestors()->findAll()) { 
 	  foreach($ancestors as $i=>$cat){
@@ -14,7 +14,7 @@ if($model->category instanceof Category) {
 	$breadcrumbs[$model->category->title] = array('shop/category', 'id'=>$model->category->id);
 }
 if($model->isNewRecord){
-  $breadcrumbs[] = 'Создание товара';
+  $breadcrumbs[] = 'Создание Статья';
 }
 else {
   $breadcrumbs[] = $model->title . ' - редактирование';
@@ -62,10 +62,10 @@ $this->breadcrumbs = $breadcrumbs;
 
       <?php if (!$model->isNewRecord): ?>
         <div class="right">
-          <a href="<?php echo $this->createUrl('shop/productDelete', array('id'=>$model->id)); ?>"onclick="return confirm('Вы действительно хотите удалить товар?')" class="btn btn-danger">Удалить товар</a>
+          <a href="<?php echo $this->createUrl('shop/productDelete', array('id'=>$model->id)); ?>"onclick="return confirm('Вы действительно хотите удалить статьй?')" class="btn btn-danger">Удалить товар</a>
         </div>
         <div class="right">
-          <a href="<?php echo $this->createUrl('shop/productclone', array('id'=>$model->id)); ?>" class="btn btn-info">Клонировать товар</a>
+          <a href="<?php echo $this->createUrl('shop/productclone', array('id'=>$model->id)); ?>" class="btn btn-info">Клонировать статью</a>
         </div>
       <?php endif; ?>
       <div class="clr"></div>

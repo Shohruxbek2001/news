@@ -1,6 +1,6 @@
-<? $this->breadcrumbs = array('Атрибуты товара'=>array('attributes/index'));?>
+<? $this->breadcrumbs = array('Атрибуты статьи'=>array('attributes/index'));?>
 
-<h1>Атрибуты товара</h1>
+<h1>Атрибуты статьия</h1>
 
 <a class="btn btn-primary" href="<?php echo $this->createUrl('attributes/add')?>">Новый атрибут</a>
 

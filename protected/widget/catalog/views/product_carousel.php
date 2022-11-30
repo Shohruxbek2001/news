@@ -5,18 +5,20 @@
 ?>
 <div class="product-carousel-block">
 	<div class="product-carousel-header">
-		<!-- <div class="carousel-name">
-			<h3>Популярные товары</h3>
-		</div> -->
 		<div id="carousel-control" class="carousel-control"></div>
 	</div>
 	<div id="product-carousel" class="product-carousel">
 		<?php foreach($dataProvider->getData() as $data): ?>
-			<?php
-			$this->controller->renderPartial('//shop/_products', [
-				'data' => $data
-			]);
-			?>
+            <div class="popular-post-grid">
+                <div class="post-img">
+                    <a href="<?=Yii::app()->createUrl('shop/product', ['id'=>$data->id])?>"><img src="/images/product/<?=$data->main_image?>" alt="" /></a>
+                </div>
+                <div class="post-text">
+                    <a class="pp-title" href="<?=Yii::app()->createUrl('shop/product', ['id'=>$data->id])?>"><?=$data->title?></a>
+                    <p><?php echo $data['update_time']?></p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
 		<?php endforeach; ?>
 	</div>
 </div>

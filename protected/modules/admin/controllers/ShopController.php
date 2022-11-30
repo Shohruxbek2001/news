@@ -190,7 +190,7 @@ class ShopController extends AdminController
             Yii::app()->end();
             die();
         }
-        $this->pageTitle = D::cms('shop_title', 'Каталог') . ' / Сортировка категорий';
+        $this->pageTitle = D::cms('shop_title', 'Статьи') . ' / Сортировка категорий';
 
         $this->render('category_sort');
     }
@@ -623,7 +623,7 @@ class ShopController extends AdminController
         $category = Category::model()->findByPk((int)$id);
 
         $result = array();
-        $result[D::cms('shop_title', 'Каталог')] = array('shop/index');
+        $result[D::cms('shop_title', 'Статьи')] = array('shop/index');
 
         if (count($category)) {
             $parents = $category->ancestors()->findAll();
@@ -663,8 +663,8 @@ class ShopController extends AdminController
             throw new \CHttpException(404);
 
         $this->breadcrumbs = [
-            D::cms('shop_title', 'Каталог') => ['shop/index'],
-            'Популярные товары' => ['shop/carousel']
+            D::cms('shop_title', 'Статьи') => ['shop/index'],
+            'Популярные статьи' => ['shop/carousel']
         ];
 
         $dataProvider = Product::model()->cardColumns()->scopeSort('product_carousel')->getDataProvider(['condition' => 'in_carousel=1'], false);

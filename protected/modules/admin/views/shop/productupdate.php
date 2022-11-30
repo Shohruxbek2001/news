@@ -1,6 +1,6 @@
-<?php $this->pageTitle = 'Редактирование товар - '. $this->appName; ?>
+<?php $this->pageTitle = 'Редактирование статья - '. $this->appName; ?>
 
-<h1>Редактирование товара</h1>
+<h1>Редактирование Статья</h1>
 
 <?php echo $this->renderPartial('form_product_general', compact('model', 'fixAttributes', 'categoryList', 'relatedCategories', 'eavAttributes', 'productAttrs')); ?>
 

@@ -1,6 +1,6 @@
 <div class="form">
     <? $this->breadcrumbs = array(
-        'Атрибуты товара'=>array('attributes/index'),
+        'Атрибуты статьи'=>array('attributes/index'),
         $model->isNewRecord ? 'Создание атрибута' : 'Редактирование атрибута'
     );?>
 

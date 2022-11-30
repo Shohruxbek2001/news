@@ -83,7 +83,7 @@ class ProductReview extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'username' => 'Имя',
-            'product_id' => 'Товар',
+            'product_id' => 'Статьи',
             'mark' => 'Ваша оценка',
 			'text' => 'Текст',
 			'ts' => 'Время',

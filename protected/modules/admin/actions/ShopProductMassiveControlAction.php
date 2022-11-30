@@ -76,7 +76,7 @@ class ShopProductMassiveControlAction extends \CAction
                         
                         Y::setFlash(
                             'SHOP_PRODUCT_MASSIVE_CONTROL_SUCCESS', 
-                            'Выбранные товары скопированы в категорию '
+                            'Выбранные статьи скопированы в категорию '
                             . \CHtml::link($category->title, ['/cp/shop/category', 'id'=>$category->id])
                         );
                         
@@ -88,7 +88,7 @@ class ShopProductMassiveControlAction extends \CAction
                         
                         Y::setFlash(
                             'SHOP_PRODUCT_MASSIVE_CONTROL_SUCCESS', 
-                            'Выбранные товары перенесены в категорию '
+                            'Выбранные статьи перенесены в категорию '
                             . \CHtml::link($category->title, ['/cp/shop/category', 'id'=>$category->id])
                         );
                         
@@ -114,7 +114,7 @@ class ShopProductMassiveControlAction extends \CAction
                         
                         Y::setFlash(
                             'SHOP_PRODUCT_MASSIVE_CONTROL_SUCCESS', 
-                            'Выбранные товары отвязаны от категории '
+                            'Выбранные статьи отвязаны от категории '
                             . \CHtml::link($category->title, ['/cp/shop/category', 'id'=>$category->id])
                         );
                         
@@ -127,7 +127,7 @@ class ShopProductMassiveControlAction extends \CAction
                         
                         Y::setFlash(
                             'SHOP_PRODUCT_MASSIVE_CONTROL_SUCCESS', 
-                            'Выбранные товары удалены'
+                            'Выбранные статьи удалены'
                         );
                         
                         $this->ajax->success=true;

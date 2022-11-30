@@ -158,7 +158,7 @@ class SettingsForm extends \common\components\base\FormModel
      * @var array $_defaults массив значений по умолчанию. array(attribute=>value)
      */
     private $_defaults = array(
-        'shop_title' => 'Kаталог',
+        'shop_title' => 'Статьи',
         'shop_enable_reviews' => 1,
         'gallery_title' => 'Фотогалерея',
         'gallery_on_page' => 6,
@@ -330,17 +330,17 @@ class SettingsForm extends \common\components\base\FormModel
             // question
             'question_collapsed' => 'Свернуть ответы',
             // shop
-            'shop_title' => 'Название магазина',
+            'shop_title' => 'Название Статьи',
             'shop_pos_description' => 'Позиция текста описания категории',
-            'shop_enable_attributes' => 'Активировать аттрибуты товара',
+            'shop_enable_attributes' => 'Активировать аттрибуты Статьи',
             'shop_enable_filter' => 'Активировать фильтрацию',
-            'shop_enable_reviews' => 'Отзывы на товар',
-            'shop_enable_carousel' => 'Активировать блок "Популярные товары"',
-            'shop_enable_hit_on_top' => 'Отображать "Акция", "Хит", "Новинка" в начале списка товаров',
-            'shop_category_descendants_level' => 'Уровень вложенности категорий, из которых будут получаться товары',
+            'shop_enable_reviews' => 'Отзывы на Статьи',
+            'shop_enable_carousel' => 'Активировать блок "Популярные Статьи"',
+            'shop_enable_hit_on_top' => 'Отображать "Акция", "Хит", "Новинка" в начале списка Статьи',
+            'shop_category_descendants_level' => 'Уровень вложенности категорий, из которых будут получаться Статьи',
             'shop_enable_brand' => 'Активировать "Бренды"',
             'shop_enable_old_price' => 'Активировать функционал "Старая цена"',
-            'shop_product_page_size' => 'Кол-во товаров на странице',
+            'shop_product_page_size' => 'Кол-во Статьи на странице',
             'shop_show_categories' => 'Показать список категорий',
             'shop_menu_enable' => 'Активировать выпадающий список категорий в меню',
             'shop_menu_level' => 'Уровень вложенности категорий в меню',

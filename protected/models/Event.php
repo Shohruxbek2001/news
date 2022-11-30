@@ -17,6 +17,7 @@ use common\components\helpers\HArray as A;
 
 class Event extends \common\components\base\ActiveRecord
 {
+    protected $moreImg;
     public $image;
     public $file;
     public $files;
@@ -103,6 +104,21 @@ class Event extends \common\components\base\ActiveRecord
         return Yii::app()->params['month'] 
         	? Y::formatDateVsRusMonth($this->created) 
         	: Y::formatDate($this->created, 'dd.MM.yyyy');
+    }
+    public function getMoreImages()
+    {
+        if ($this->moreImg == null) {
+            $this->moreImg = CImage::model()->findAll([
+                'order' => 'ordering',
+                'condition' => 'model=? AND item_id=?',
+                'params' => [
+                    strtolower(get_class($this)),
+                    $this->id
+                ],
+            ]);
+        }
+
+        return $this->moreImg;
     }
 
     public function getPreviewImg(){

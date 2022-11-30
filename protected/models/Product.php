@@ -105,7 +105,7 @@ class Product extends \common\components\base\ActiveRecord
         return $this->getScopes([
             'lastRecord'=>['order'=>'`id` DESC', 'limit'=>1],
         	'cardColumns'=>[
-        		'select'=>'`t`.`id`, `t`.`category_id`, title, code, price, sale, new, hit, link_title, notexist, old_price, `main_image`, `main_image_alt`, `main_image_enable`, `hidden`'
+        		'select'=>'`t`.`id`,`update_time`, `t`.`category_id`, title, code, price, sale, new, hit, link_title, notexist, old_price, `main_image`, `main_image_alt`, `main_image_enable`, `hidden`'
         	],
         	'defaultOrder'=>['order'=>'`t`.`id` DESC'],
         	'visibled'=>['condition'=>'((`t`.`hidden` <> 1) OR ISNULL(`t`.`hidden`))'],

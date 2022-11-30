@@ -112,13 +112,13 @@ return [
 
         // каталог товаров
         'catalog'=>[
-            'title'=>function() { return \D::cms('shop_title', 'Каталог'); },
+            'title'=>function() { return \D::cms('shop_title', 'Статьи'); },
             'disabled'=>function() { return !\D::yd()->isActive('shop'); },
             'loc'=>function() { return Y::createUrl('/catalog'); },
             'priority'=>1,
             'items'=>[
                 'category'=>[
-                    'title'=>function() { return \D::cms('shop_title', 'Каталог'); },
+                    'title'=>function() { return \D::cms('shop_title', 'Статьи'); },
                     'class'=>'\Category',
                     'criteria'=>['select'=>'id, lft, rgt, level, root, update_time', 'order'=>'root,lft'],
                     'loc'=>function($model) { return Y::createUrl('/shop/category', ['id'=>$model->id]); },
@@ -132,7 +132,7 @@ return [
                     },
                     'items'=>[
                         'product'=>[
-                            'title'=>function() { return \D::cms('shop_title', 'Каталог'); },
+                            'title'=>function() { return \D::cms('shop_title', 'Статьи'); },
                             'class'=>'\Product',
                             'criteria'=>['scopes'=>'visibled', 'select'=>'id, update_time'],
                             'loc'=>function($model) { return Y::createUrl('/shop/product', ['id'=>$model->id]); },

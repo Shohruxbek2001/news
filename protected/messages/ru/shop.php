@@ -1,5 +1,5 @@
 <?php
 return array(
-	'shop_title'=>'Каталог',
-	'product_not_found'=>'Товар не найден в каталоге'
+	'shop_title'=>'Статьи',
+	'product_not_found'=>'Статьи не найден в каталоге'
 );

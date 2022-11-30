@@ -16,7 +16,7 @@
     <?php echo $form->labelEx($model, 'shop_pos_description'); ?>
     <?php echo $form->error($model,'shop_pos_description'); ?>
     <?$model->shop_pos_description = $model->shop_pos_description<>1 ? 0 : 1;?>
-    <?php echo $form->radioButtonList($model, 'shop_pos_description', array(0=>'перед списком товаров', 1=>'после списка товаров'), array(
+    <?php echo $form->radioButtonList($model, 'shop_pos_description', array(0=>'перед списком статьия', 1=>'после списка товаров'), array(
     	'labelOptions'=>array('class'=>'inline'), 
     )); ?>
 </div>

@@ -1,11 +1,11 @@
 <?php $this->pageTitle = D::cms('shop_title').' - '. $this->appName; ?>
 <?php
     $this->breadcrumbs=array(
-    	D::cms('shop_title', 'Каталог') => array('shop/index')
+    	D::cms('shop_title', 'Статьи') => array('shop/index')
     );
 ?>
 <div class="left">
-  <h1><?=D::cms('shop_title', 'Каталог')?></h1>
+  <h1><?=D::cms('shop_title', 'Статьи')?></h1>
 </div>
 <div class="right">
   <?php /* echo CHtml::link('Очистить кеш картинок  <i class="glyphicon glyphicon-warning-sign"></i>',

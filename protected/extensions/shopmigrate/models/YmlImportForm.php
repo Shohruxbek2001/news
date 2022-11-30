@@ -478,7 +478,7 @@ class YmlImportForm extends \common\components\base\FormModel
 						}
 					}
 					else {
-						$this->addImportError($productModel, 'Не добавлен товар '.$productModel->title.' (#'.$productModel->id.')');
+						$this->addImportError($productModel, 'Не добавлен статьи '.$productModel->title.' (#'.$productModel->id.')');
 					}
 				}
 			}
@@ -497,7 +497,7 @@ class YmlImportForm extends \common\components\base\FormModel
 						$model->save();
 					}
 					catch(\Exception $e) {
-						$message='Связь товара ' . $productModels[$offerId]->title . ' (#'.$productModels[$offerId]->id.')'
+						$message='Связь статьи ' . $productModels[$offerId]->title . ' (#'.$productModels[$offerId]->id.')'
 							. ' с категорей ' . $categoryModels[$categoryId]->title . ' (#'.$categoryModels[$categoryId]->id.') не добавлена';
 						$this->addError('importErrors', $message);
 					}

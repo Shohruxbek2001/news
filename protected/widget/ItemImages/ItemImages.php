@@ -9,7 +9,7 @@
 
 class ItemImages extends CWidget
 {
-    public $model;
+    public $model = 'event';
     public $item_id;
     public $view = 'site';
     public $countPerPage;
@@ -17,10 +17,10 @@ class ItemImages extends CWidget
     public function run()
     {
         $criteria = new CDbCriteria();
-        $criteria->condition = 'model = :model AND item_id = :item_id';
+        $criteria->condition = 'model = :model';
         $criteria->params['model']   = $this->model;
-        $criteria->params['item_id'] = $this->item_id;
-        $criteria->order = 'ordering';
+//        $criteria->params['item_id'] = $this->item_id;
+//        $criteria->order = 'ordering';
 
         $imageProvider = new CActiveDataProvider('CImage', array(
             'criteria'=>$criteria,

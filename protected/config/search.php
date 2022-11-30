@@ -24,7 +24,7 @@ return [
     'search' => [
         'models' => [
 			'\Product' => [
-                'title' => 'Товары',
+                'title' => 'Статьи',
                 'attributes' => ['title', 'description', 'code'],
                 'criteria' => ['scopes'=>['cardColumns', 'visibled']],
 				// 'strong_relevance_multiplier'=>4,
@@ -37,7 +37,7 @@ return [
 				'wrapperOpen'=>'<div id="product-list-module">',
 				'wrapperClose'=>'</div>',
 				'listView'=>[
-					'emptyText'=>'<div class="category-empty">Нет товаров для отображения.</div>',
+					'emptyText'=>'<div class="category-empty">Нет статьи для отображения.</div>',
 					'itemView'=>'/shop/_products',
 					'itemsCssClass'=>'t3__adaptive-product__list product-list row',
 					'sortableAttributes'=>['title', 'price'],

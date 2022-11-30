@@ -48,7 +48,7 @@ class DefaultController extends BaseController
         
 		$this->setPageTitle($t('page.title'));
         $this->breadcrumbs=[
-            \D::cms('shop_title', 'Каталог')=>'shop/index',
+            \D::cms('shop_title', 'Статьи')=>'shop/index',
             $t('page.title')
         ];
         

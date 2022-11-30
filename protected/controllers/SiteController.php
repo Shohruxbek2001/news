@@ -174,14 +174,17 @@ class SiteController extends Controller
         $events = Event::model()->findAll($criteria);
 
         $this->prepareSeo($this->getEventHomeTitle());
-
+        $criteria2 = new CDbCriteria();
+        $criteria2->condition = 'publish = 1';
+        $criteria2->order     = 'created ASC, id ASC';
+        $eventRevers = Event::model()->findAll($criteria2);
         foreach($events as $e) {
             ContentDecorator::decorate($e);
         }
         
         $this->breadcrumbs->add($this->getEventHomeTitle());
 
-        $this->render('events', compact('events', 'pages'));
+        $this->render('events', compact('events', 'pages','eventRevers'));
     }
 
     public function actionBlog($id)

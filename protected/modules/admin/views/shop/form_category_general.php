@@ -3,7 +3,7 @@ use common\components\helpers\HHtml;
 
 $breadcrumbs = array();
 
-$breadcrumbs[D::cms('shop_title', 'Каталог')] = array('shop/index');
+$breadcrumbs[D::cms('shop_title', 'Статьи')] = array('shop/index');
 $breadcrumbs = $this->getBreadcrumbs(Yii::app()->request->getQuery('parent_id',Yii::app()->request->getQuery('id', 0)), true);
 if($model->isNewRecord){
   $breadcrumbs[] = 'Добавление категории';
@@ -57,7 +57,7 @@ $this->breadcrumbs = $breadcrumbs;
             <? endif; ?>
             <? if(D::role('sadmin') && D::isDevMode()): ?>
             <a href="<?php echo $this->createUrl('shop/categoryTotalDelete', array('id'=>$model->id, 'hash'=>md5($model->id))); ?>"
-               onclick="return confirm('Вы действительно хотите удалить категорию со всеми подкатегориями и товарами?')" class="btn btn-danger">Удалить категорию<br/><span class="small">со всеми подкатегориями и товарами</span></a>
+               onclick="return confirm('Вы действительно хотите удалить категорию со всеми подкатегориями и статьиям?')" class="btn btn-danger">Удалить категорию<br/><span class="small">со всеми подкатегориями и товарами</span></a>
             <? endif; ?>
         </div>
         <?php endif; ?>

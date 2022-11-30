@@ -15,11 +15,11 @@ $this->widget('widget.listView.DSizerListView', array(
 	],
 	'loadingCssClass'=>'loading-content',
 	'itemsTagName'=>'div',
-	'emptyText' => '<div class="category-empty col-12">Нет товаров для отображения.</div>',
+	'emptyText' => '<div class="category-empty col-12">Нет статьи для отображения.</div>',
 	'itemsCssClass'=>'product-list row',
 	'sortableAttributes'=>[
 		'title',
-		'price',
+//		'price',
 	],
 	'afterAjaxUpdate'=>'function(){}',
 	'id'=>'ajaxListView',

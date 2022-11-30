@@ -285,11 +285,11 @@ class DApi extends \CComponent
 			'options'=>'{"model":"shop"}'
 		));
 		
-		$attributes=array('title'=>'Отзывы на товар', 'options'=>'{"model":"review"}');
+		$attributes=array('title'=>'Отзывы на статью', 'options'=>'{"model":"review"}');
 		if((int)D::cms('shop_enable_reviews', 1) === 1) $this->_addMenuItem($attributes, true);
 		else $this->_removeMenuItem($attributes);
 		
-		$attributes=array('title'=>'Аттрибуты товара', 'options'=>'{"model":"attributes"}');
+		$attributes=array('title'=>'Аттрибуты статьи', 'options'=>'{"model":"attributes"}');
 		\Yii::app()->params['attributes']=((int)D::cms('shop_enable_attributes') === 1);
 		if(\Yii::app()->params['attributes']) $this->_addMenuItem($attributes, true);
 		else $this->_removeMenuItem($attributes);

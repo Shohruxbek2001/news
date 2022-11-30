@@ -6,7 +6,7 @@
 <div class="product-carousel-block">
 	<div class="product-carousel-header">
 		<div class="carousel-name">
-			<h3>Популярные товары</h3>
+			<h3>Популярные статьи</h3>
 		</div>
 		<div id="carousel-control" class="carousel-control"></div>
 	</div>

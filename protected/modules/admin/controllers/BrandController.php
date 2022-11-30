@@ -173,7 +173,7 @@ class BrandController extends AdminController
 	protected function getBaseBreadcrumbs()
 	{
 		return [
-			D::cms('shop_title', 'Каталог') => ['shop/index'],
+			D::cms('shop_title', 'Статьи') => ['shop/index'],
 			\Yii::t('AdminModule.brand', 'title') => ['index']
 	   	];
 	}

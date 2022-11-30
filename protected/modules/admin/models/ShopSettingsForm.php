@@ -24,7 +24,7 @@ class ShopSettingsForm extends CFormModel
     public function attributeLabels()
     {
         return array(
-            'cropTop'=>'Позиция обрезки фото товара',
+            'cropTop'=>'Позиция обрезки фото статьи',
         	'meta_title' => 'Meta Title',
         	'meta_key' => 'Meta Keywords',
         	'meta_desc' => 'Meta Description',

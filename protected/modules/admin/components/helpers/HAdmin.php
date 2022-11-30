@@ -145,7 +145,7 @@ class HAdmin
 	public static function menuItemsNotifications()
 	{
 		$methods=[
-            ['\ecommerce\modules\order\modules\admin\components\helpers\HAdmin', 'menuNotificationOrders'],
+//            ['\ecommerce\modules\order\modules\admin\components\helpers\HAdmin', 'menuNotificationOrders'],
 			'menuNotificationFeedbacks', 
 			'menuNotificationQuestion',
 			'menuNotificationProductReviews',

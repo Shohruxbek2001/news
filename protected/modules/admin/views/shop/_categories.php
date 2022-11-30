@@ -30,6 +30,6 @@
     if (isset($model))
         $route['category_id'] = $model->id;
     ?>
-  <?if(isset($model) || $categories) echo CHtml::link('Новый товар', $route, array('class'=>'add btn btn-primary')).'&nbsp;'?> 
+  <?if(isset($model) || $categories) echo CHtml::link('Новый Статья', $route, array('class'=>'add btn btn-primary')).'&nbsp;'?>
   <?php if (isset($model)) echo CHtml::link('Редактировать категорию', array('shop/categoryUpdate', 'id'=>$model->id), array('class'=>'add btn btn-info')); ?>
 </div>

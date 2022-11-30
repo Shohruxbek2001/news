@@ -3,7 +3,7 @@
         function updateCount(e) {
             var target = $(e.target);
             if ($(target).val() == 0) {
-                var ok = confirm('Вы хотите удалить товар из корзины?');
+                var ok = confirm('Вы хотите удалить статия из корзины?');
                 if (!ok) return;
             }
             $.post('<?php echo Yii::app()->createUrl('shop/updatecart'); ?>', target, function(data) {

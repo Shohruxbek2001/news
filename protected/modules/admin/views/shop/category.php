@@ -12,7 +12,7 @@ $this->breadcrumbs = $breadcrumbs;
 	<div class="checkbox">
 		<? $this->widget('\common\widgets\form\SwitchField', [
 			'name'=>'switch-hide-related-products', 
-			'label'=>'Скрыть вложенные и привязанные товары ',
+			'label'=>'Скрыть вложенные и привязанные статьи ',
 			'checked'=>(!empty($modeRelatedHidden) && $modeRelatedHidden),
 			'labelBefore'=>true,
 			'wrapperTag'=>'',

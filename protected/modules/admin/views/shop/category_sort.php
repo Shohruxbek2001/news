@@ -5,7 +5,7 @@
  */
 
 $this->breadcrumbs = array(
-	D::cms('shop_title', 'Каталог') => array('shop/index'),
+	D::cms('shop_title', 'Статьи') => array('shop/index'),
 	'Сортировка категорий' => array('shop/categorySort')
 );
 

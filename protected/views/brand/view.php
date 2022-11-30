@@ -44,7 +44,7 @@
 	],
 	'loadingCssClass'=>'loading-content',
 	'itemsTagName'=>'div',
-	'emptyText' => '<div class="category-empty">Нет товаров для отображения.</div>',
+	'emptyText' => '<div class="category-empty">Нет статьия для отображения.</div>',
 	'itemsCssClass'=>'product-list',
 	'sortableAttributes'=>[
 		'title',

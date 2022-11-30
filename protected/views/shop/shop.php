@@ -19,14 +19,14 @@ if(D::role('admin')) CmsHtml::editPricePlugin();?>
 		$this->widget('zii.widgets.CListView', array(
 		    'dataProvider'=>$dataProvider,
 		    'itemView'=>'_products', 
-		    'sorterHeader'=>'Сортировка:',
+//		    'sorterHeader'=>'Сортировка:',
 		    'itemsTagName'=>'div',
+
 		    'emptyText' => '',
 		    'itemsCssClass'=>'product-list row',
-		    'sortableAttributes'=>array(
-		        'title',
-		        'price',
-		    ),
+//		    'sortableAttributes'=>array(
+//		        'title',
+//		    ),
 		    'afterAjaxUpdate'=>'function(){}',
 		    'id'=>'ajaxListView',
 		    'template'=>'{items}',

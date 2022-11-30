@@ -5,14 +5,17 @@
 class ProductListWidget extends CWidget
 {
     public $criteria;
+
     public $view='product_list';
 
     public function run()
     {
-        $dataProvider = Product::model()->getDataProvider($this->criteria);
+        $criteria = new CDbCriteria();
+        $criteria->order     = 'created DESC, id DESC';
+        $products = Product::model()->getDataProvider($this->criteria);
 
-        if(!$dataProvider->totalItemCount) return false;
+        if(!$products->totalItemCount) return false;
         
-        $this->render('default', compact('dataProvider'));
+        $this->render('default', compact('products'));
     }
 }
